@@ -1,0 +1,86 @@
+.teenwolf__art {
+    display: flex;
+    flex-direction: column;    
+}
+
+.teenwolf__art-heading {
+    width: 100%;
+    text-align: left;
+
+    margin-bottom: 5rem;
+}
+
+.teenwolf__art-heading h1 {
+    font-size: 62px;
+    line-height: 75px;
+    font-family: var(--font-family);
+    font-weight: 800;
+}
+
+.teenwolf__art-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.teenwolf__art-container_groupA {
+    flex: 0.75;
+    margin: 2rem;
+    margin-right: 4rem;
+    padding-bottom: 2rem;
+}
+
+.teenwolf__art-container_groupB {
+    flex: 1;
+    margin: 2rem;
+    width: 200px;
+    margin-left: 4.5rem;
+
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.3rem;
+}
+
+@media screen and (max-width: 990px) {
+    .teenwolf__art-container {
+        flex-direction: column-reverse;
+    }
+
+
+    .teenwolf__art-container_groupA {
+        margin: 2rem 0;
+    }
+
+    .teenwolf__art-container_groupA .teenwolf__art-container_article  {
+       width: 48%;
+    }
+
+    .teenwolf__art-container_groupA .teenwolf__art-container_article-image {
+        height: 250px;
+    }
+    .teenwolf__art-container_groupB {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .teenwolf__art-container_groupB {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .teenwolf__art-container_groupA .teenwolf__art-container_article  {
+       width: 100%;
+    }
+
+    .teenwolf__art-heading h1 {
+        font-size: 46px;
+        line-height: 52px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .teenwolf__art-heading h1 {
+        font-size: 34px;
+        line-height: 42px;
+    }
+
+}
